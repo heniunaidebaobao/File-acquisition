@@ -12,7 +12,8 @@
 (function() {
     'use strict';
 
-    setTimeout(() => {
+    setInterval(function() {
+		console.log('测试');
 		//判断是否有右侧个人信息div
 		if(document.querySelector("div.profile-user")){
 			//如果没有解析按钮
