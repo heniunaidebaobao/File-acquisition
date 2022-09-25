@@ -1,5 +1,4 @@
-# File-acquisition
-油猴插件库
+油猴插件库----说明
 
 # https://github.com/heniunaidebaobao/Oil_monkey_plug-in_library/blob/main/Carousel_map_link.json
 Carousel_map_link.json    为    轮播图图片
