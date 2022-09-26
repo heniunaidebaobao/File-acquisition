@@ -104,6 +104,9 @@
 		if(document.querySelector("div.T_foQflM > div > footer")){
 			document.querySelector("div.T_foQflM > div > footer").remove();
 		}
+		if(document.querySelector("div.n9PPTk22")){
+			document.querySelector("div.n9PPTk22").remove();
+		}
 	};
 	
 	//去除不允许创建文件的字符
