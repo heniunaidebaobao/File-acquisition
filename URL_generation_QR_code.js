@@ -17,6 +17,7 @@
 		div.style = 'z-index: 9999;position: fixed;';
 		document.querySelector("html").prepend(div);
 		let img = document.createElement("img");
+		img.style = 'height: 330px;width: 330px;';
 		img.src = 'https://api.pwmqr.com/qrcode/create/?url=' + window.document.location.href;
 		img.crossOrigin = 'anonymous';
 		div.append(img);
