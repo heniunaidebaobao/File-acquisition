@@ -8,3 +8,6 @@ Kwai_short_video_analysis.js    为    快手短视频解析
 
 # https://github.com/heniunaidebaobao/Oil_monkey_plug-in_library/blob/main/Analysis_of_Tiktok_short_video.js
 Analysis_of_Tiktok_short_video.js    为    抖音短视频解析
+
+# https://github.com/heniunaidebaobao/Oil_monkey_plug-in_library/blob/main/URL_generation_QR_code.js
+URL_generation_QR_code.js    为    按浏览器网页生成二维码
