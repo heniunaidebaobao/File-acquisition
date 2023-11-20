@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         快手短视频解析
-// @version      2.1
+// @version      2.12
 // @description  快手短视频解析
 // @author       喝牛奶的宝宝
 // @match        *://www.kuaishou.com/*
@@ -34,7 +34,7 @@
 				let div = document.createElement("div");
 				div.classList = 'right-part';
 				div.id = 'jiexi';
-				div.innerHTML = '<div data-v-4283e0fe="" data-v-68cd9209="" class="follow-button short-video-follow"><div data-v-68cd9209=""></div>解析</div><div style="color: white;display: none;position: fixed;" id="niunai_anniu"><div id="to_download">直接下载</div><div id="to_copy">复制链接</div><div id="to_open">打开链接</div><div id="to_PotPlayer">PotPlayer打开</div></div>';
+				div.innerHTML = '<div data-v-68cd9209 data-v-09c1df08 class="follow-button short-video-follow"><div data-v-68cd9209></div>解析</div><div style="color: white;display: none;position: fixed;" id="niunai_anniu"><div id="to_download">直接下载</div><div id="to_copy">复制链接</div><div id="to_open">打开链接</div><div id="to_PotPlayer">PotPlayer打开</div></div>';
 				document.querySelector("div.profile-user").append(div);
 				//鼠标在视频div滚动
 				document.querySelector("div.short-video-wrapper").onwheel = function(event){
@@ -53,7 +53,7 @@
 				div.onmouseout = function(){
 					document.querySelector("#niunai_anniu").style.display = 'none';
 				};
-				
+
 				//鼠标进入下载div
 				document.querySelector("#to_download").onmouseover = function(){
 					document.querySelector("#to_download").style.color = 'red';
@@ -62,7 +62,7 @@
 				document.querySelector("#to_download").onmouseout = function(){
 					document.querySelector("#to_download").style.color = 'white';
 				};
-				
+
 				//鼠标进入复制div
 				document.querySelector("#to_copy").onmouseover = function(){
 					document.querySelector("#to_copy").style.color = 'red';
@@ -71,7 +71,7 @@
 				document.querySelector("#to_copy").onmouseout = function(){
 					document.querySelector("#to_copy").style.color = 'white';
 				};
-				
+
 				//鼠标进入打开div
 				document.querySelector("#to_open").onmouseover = function(){
 					document.querySelector("#to_open").style.color = 'red';
@@ -80,7 +80,7 @@
 				document.querySelector("#to_open").onmouseout = function(){
 					document.querySelector("#to_open").style.color = 'white';
 				};
-				
+
 				//鼠标进入PotPlayer div
 				document.querySelector("#to_PotPlayer").onmouseover = function(){
 					document.querySelector("#to_PotPlayer").style.color = 'red';
@@ -89,23 +89,23 @@
 				document.querySelector("#to_PotPlayer").onmouseout = function(){
 					document.querySelector("#to_PotPlayer").style.color = 'white';
 				};
-				
+
 				//绑定下载事件
 				document.querySelector("#to_download").onclick = function(){
 					GM_download(document.querySelector(".player-video").src,Nameredefinition(document.querySelector("div.short-video-info-container-detail > p").textContent) + ".mp4");
 				}
-				
+
 				//绑定复制事件
 				document.querySelector("#to_copy").onclick = function(){
 					GM_setClipboard(document.querySelector(".player-video").src);
 					toast('已复制到剪辑板');
 				}
-				
+
 				//绑定打开事件
 				document.querySelector("#to_open").onclick = function(){
 					window.open(document.querySelector(".player-video").src, '_blank');
 				}
-				
+
 				//绑定PotPlayer事件
 				document.querySelector("#to_PotPlayer").onclick = function(){
 					window.open('PotPlayer://' + document.querySelector(".player-video").src, '_self');
@@ -118,7 +118,7 @@
 			}
 		}
 	},1000);
-	
+
 	//提示
 	function toast(msg,duration){
 
@@ -146,7 +146,7 @@
 		}, duration);
 
     };
-	
+
 	//去除不允许创建文件的字符
 	function Nameredefinition(Name){
 		let str_i = ['?', '、', '╲', '/', '*', '“', '”', '<', '>', '|','\n',':'];
@@ -157,7 +157,7 @@
 		Name = Name.replace('  ', '')
 		return Name
 	};
-	
+
 	//关闭评论
 	function Close_Comment(){
 		if(document.querySelector("div.comment-container.vertical-comment.dark-mode")){
@@ -165,7 +165,7 @@
 		}
 		Obtaining_the_carousel_map();
 	}
-	
+
 	function Obtaining_the_carousel_map(){
 		var myHeaders = new Headers();
 		myHeaders.append("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.50");
@@ -184,7 +184,7 @@
 		   .then(json => Carousel_chart(json))
 		   .catch(error => console.log('error', error));
 	}
-	
+
 	//轮播图
 	function Carousel_chart(json){
 		if (!document.querySelector("div#niunai_Carousel_chart")){
