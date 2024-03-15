@@ -107,6 +107,12 @@
 		if(document.querySelector("div.n9PPTk22")){
 			document.querySelector("div.n9PPTk22").remove();
 		}
+		//清除首页左侧备案
+	        if(document.querySelector("#island_da635 > div > div > div > div > div").textContent == '首页推荐关注朋友我的直播放映厅知识游戏二次元音乐美食设置业务合作'){
+	            if(document.querySelector("#island_da635 > div > div > div > div > div").nextSibling){
+	                document.querySelector("#island_da635 > div > div > div > div > div").nextSibling.remove();
+	            }
+	        }
 	};
 	
 	//去除不允许创建文件的字符
