@@ -6,8 +6,8 @@ Tiger_Tooth.js    为    虎牙精简版
 Carousel_map_link.json    为    轮播图图片
 # https://github.com/heniunaidebaobao/Oil_monkey_plug-in_library/blob/main/Carousel_map_link.json
 
-Tiktok.m3u    为    抖音直播源
-# https://github.com/heniunaidebaobao/Oil_monkey_plug-in_library/blob/main/Tiktok.m3u
+Kugou_Music_Download.js    为    酷狗音乐下载
+# https://github.com/heniunaidebaobao/Oil_monkey_plug-in_library/blob/main/Kugou_Music_Download.js
 
 Video_analysis.json    为    视频解析
 # https://github.com/heniunaidebaobao/Oil_monkey_plug-in_library/blob/main/Video_analysis.json
@@ -23,4 +23,3 @@ URL_generation_QR_code.js    为    按浏览器网页生成二维码
 
 Baidu_removes_unwanted_content.js    为    去除百度不要内容
 # https://github.com/heniunaidebaobao/Oil_monkey_plug-in_library/blob/main/Baidu_removes_unwanted_content.js
-
