@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         抖音短视频解析
-// @version      4.1
+// @version      4.2
 // @description  抖音短视频解析
 // @author       喝牛奶的宝宝
 // @match        *://www.douyin.com/*
@@ -26,7 +26,9 @@
             if(document.querySelector("#island_b69f5 > div > div:nth-child(7) > div > div > ul > div > div > div:nth-child(6)").textContent == '我的订单直播伴侣'){
                 if(!document.querySelector("#niunai")){
                     Get_live_streaming_source_JSON()
+                    //获取我的订单div
                     const Order_Partner =document.querySelector("#island_b69f5 > div > div:nth-child(7) > div > div > ul > div > div > div:nth-child(6)")
+                    //创建A标签
                     const json_flv = document.createElement("a");
                     json_flv.id = 'niunai';
                     //title中文会导致显示的是url编码
@@ -38,6 +40,7 @@
                     json_flv.target = '_self';
                     json_flv.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" class="" viewBox="0 0 24 24" elementtiming="element-timing"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.75 6A2.75 2.75 0 004 8.75v7a2.75 2.75 0 002.75 2.75h7.501c1.5 0 2.72-1.2 2.75-2.693l1.328 1.021c.823.633 2.014.044 2.011-.995l-.022-7.28a1.25 1.25 0 00-1.976-1.014l-1.353.965A2.75 2.75 0 0014.25 6h-7.5zM17 13.916V10.34l1.82-1.299.019 6.287L17 13.916zM15.5 9.91V8.75c0-.69-.56-1.25-1.25-1.25h-7.5c-.69 0-1.25.56-1.25 1.25v7c0 .69.56 1.25 1.25 1.25h7.501c.69 0 1.25-.56 1.25-1.25v-1.413a.766.766 0 01-.002-.053v-4.33l.001-.044z" fill="#fff" fill-opacity="0.5" elementtiming="element-timing"></path></svg><p elementtiming="element-timing">直播源FLV</p>';
                     Order_Partner.append(json_flv);
+                    //创建A标签
                     const json_hls = document.createElement("a");
                     json_hls.id = 'niunai';
                     json_hls.href = 'PotPlayer://' + JSON_SD.flv_FULL_HD1;
